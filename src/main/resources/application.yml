@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: local
+  thymeleaf:
+    mode: HTML
+    encoding: UTF-8
+    check-template-location: true
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+
+---
+server:
+  port: 8888
+  
+spring:
+  profiles: local
+  # Database
+  datasource:
+    url: jdbc:mysql://172.20.10.6:3306/home?serverTimezone=Asia/Seoul&useSSL=false
+    username: root
+    password: lois@1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
